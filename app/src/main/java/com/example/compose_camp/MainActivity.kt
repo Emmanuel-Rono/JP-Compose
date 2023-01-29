@@ -16,16 +16,18 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             Column(
-                modifier=Modifier
+                modifier= Modifier
                     .background(Color.Blue)
                     .fillMaxWidth(0.7f)
                     .fillMaxHeight(0.7f)
                     .requiredWidth(300.dp)
-                    .padding(top=20.dp),
+                    .padding(top = 20.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Top
             ) {
                 Text("Hello World")
+                Spacer(modifier = Modifier.height(5.dp)) //Takes on argument
+                Text("Hello", modifier=Modifier.offset(50.dp,50.dp))
             }
 
         }
